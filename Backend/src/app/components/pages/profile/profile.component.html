@@ -1,0 +1,38 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+<div class="row">
+<div class="col-md-12 headertable">
+<body>
+<form (ngSubmit)="onSaveUser(profileForm.value)" [formGroup]="profileForm">
+    <mat-card class="profile-card">
+      <mat-card-header>
+        <div class="label bottom">
+          <p>Cambiar</p>
+          <img [src]="currentImage" (click)="inputImageProfile.click()" />
+          <input hidden type="file" #inputImageProfile formControlName="photoURL"
+            (change)="handleImage(($event?.target?.files)[0])" />
+        </div>  
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          <mat-form-field>
+              <input type="text" matInput  placeholder="Nombre  " formControlName="displayName"/>
+          </mat-form-field>
+      </p>
+      <p>
+          <mat-form-field>
+              <input type="text" matInput  placeholder="Email" formControlName="email" />
+          </mat-form-field>
+      </p>
+
+        <div class="mat-dialog-actions">
+          <input type="submit" class="mat-flat-button" value="Guardar" />
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</body>
+</div>
+</div>
+</div>  

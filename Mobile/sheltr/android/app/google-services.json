@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "592553192950",
+    "firebase_url": "https://sheltr-f785f.firebaseio.com",
+    "project_id": "sheltr-f785f",
+    "storage_bucket": "sheltr-f785f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592553192950:android:231cdd938aefa3e36fabd7",
+        "android_client_info": {
+          "package_name": "ar.com.sheltr.sheltr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592553192950-1bthj02lcr4jk229mcdtdv8pcf77b4j2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ar.com.sheltr.sheltr",
+            "certificate_hash": "e9f7f4b419811d9d25ff4de08e3ae7b83b09a5ea"
+          }
+        },
+        {
+          "client_id": "592553192950-eqgarfc6lccrcur1cais1uv3m66e5nnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvbP1vizK0CgFJYVXsumT1KKW_TcrlI1Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592553192950-eqgarfc6lccrcur1cais1uv3m66e5nnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

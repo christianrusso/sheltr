@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sheltr-f785f": {
+      "hosting": {
+        "now-ui-dashboard-angular": [
+          "sheltr-f785f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sheltr-f785f"
+  }
+}
