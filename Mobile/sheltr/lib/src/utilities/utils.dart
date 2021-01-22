@@ -48,12 +48,14 @@ Future<bool> questionMessage(
     },
   );
 }
+
 Future<bool> questionMessageWithImage(
     {@required BuildContext context,
     @required String title,
     String subtitle = '',
     String titleCancel = 'Cancelar',
-    String titleOk = 'Aceptar',String titleImage='Agregar'}) async {
+    String titleOk = 'Aceptar',
+    String titleImage = 'Agregar'}) async {
   return await showDialog<bool>(
     context: context,
     barrierDismissible: false,
@@ -67,17 +69,17 @@ Future<bool> questionMessageWithImage(
             onPressed: () {
               Navigator.pop(context, false);
             },
-          ), 
+          ),
           CupertinoDialogAction(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:[
-              Text(titleImage,style: TextStyle(fontSize: 27)),
-              SizedBox(width: 20,),
-              Icon(Icons.camera_alt,size: 30)
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(titleImage, style: TextStyle(fontSize: 27)),
+              SizedBox(
+                width: 20,
+              ),
+              Icon(Icons.camera_alt, size: 30)
             ]),
             onPressed: () {
-             loadAssets(maxImagenes: 1);
+              loadAssets(maxImagenes: 1);
             },
           ),
           CupertinoDialogAction(
@@ -102,13 +104,14 @@ Future<List<Asset>> loadAssets({int maxImagenes = 10}) async {
       selectedAssets: resultList,
       cupertinoOptions: CupertinoOptions(takePhotoIcon: "chat"),
       materialOptions: MaterialOptions(
-        actionBarColor: "#176CF2",
+        actionBarColor: "#abcdef",
         actionBarTitle: "Imagenes",
-        allViewTitle: "Todas las Fotos",
+        allViewTitle: "Todas las Imagenes",
         useDetailsView: false,
         selectCircleStrokeColor: "#000000",
       ),
     );
+
     print(resultList.length);
     print((await resultList[0].getThumbByteData(122, 100)));
     print((await resultList[0].getByteData()));

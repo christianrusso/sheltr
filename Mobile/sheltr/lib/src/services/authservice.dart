@@ -53,6 +53,7 @@ class AuthService with ChangeNotifier {
 
       return user;
     } catch (e) {
+      print(e);
       _status = AuthStatus.Unauthenticated;
       notifyListeners();
       return null;
@@ -73,8 +74,8 @@ class AuthService with ChangeNotifier {
         .document(_user.id)
         .setData({'Imagen': urlImage.toString()}, merge: true);
 
-      DocumentSnapshot userData = await refCollection.document(_user.id).get();
-      _user.setFromFireStore(userData);
+    DocumentSnapshot userData = await refCollection.document(_user.id).get();
+    _user.setFromFireStore(userData);
 
     notifyListeners();
   }
@@ -103,6 +104,7 @@ class AuthService with ChangeNotifier {
 
       return user;
     } catch (e) {
+      print(e);
       _status = AuthStatus.Unauthenticated;
       notifyListeners();
       return null;

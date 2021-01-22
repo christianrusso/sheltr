@@ -69,36 +69,18 @@ class _MainProjectPage extends State<MainProjectPage> {
             GestureDetector(
               onTap: () async {
                 var list = await Utils.loadAssets(maxImagenes: 1);
-                if(list !=null){
+                if (list != null) {
                   await _auth.uploadImages(list[0]);
+                  setState(() {});
                 }
-                
               },
-              child:CachedNetworkImage(
-                imageUrl:  _auth.user.imagen,
-                imageBuilder: (context, imageProvider) => CircleAvatar(
-                backgroundColor: Colors.transparent,
-                child: Padding(
-                  padding: EdgeInsets.only(top: 68.0, left: 65.0),
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(
-                      Icons.photo_camera,
-                      color: Colors.blueAccent,
-                      size: 25.0,
-                    ),
-                  ),
-                ),
-                radius: 50.0,
-                backgroundImage: imageProvider,
-              ),
+              child: CachedNetworkImage(
+                imageUrl: _auth.user.imagen,
+                imageBuilder: (context, imageProvider) =>
+                    mainAvatar(imageProvider),
                 placeholder: (context, url) => CircularProgressIndicator(),
-                errorWidget: (context, url, error) => Icon(Icons.error),
+                errorWidget: (context, url, error) =>
+                    mainAvatar(AssetImage('assets/images/no-image.jpg')),
               ),
             ),
             SizedBox(
@@ -134,6 +116,30 @@ class _MainProjectPage extends State<MainProjectPage> {
     );
   }
 
+  CircleAvatar mainAvatar(ImageProvider<Object> imageProvider) {
+    return CircleAvatar(
+      backgroundColor: Colors.transparent,
+      child: Padding(
+        padding: EdgeInsets.only(top: 68.0, left: 65.0),
+        child: Container(
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            Icons.photo_camera,
+            color: Colors.blueAccent,
+            size: 25.0,
+          ),
+        ),
+      ),
+      radius: 50.0,
+      backgroundImage: imageProvider,
+    );
+  }
+
   List<Widget> _items(List<Project> items) {
     final content = List<Widget>();
 
@@ -143,31 +149,31 @@ class _MainProjectPage extends State<MainProjectPage> {
           _projectService.project = item;
           Navigator.pushNamed(context, DetailsProjectPage.routeName);
         },
-        child:CachedNetworkImage(
-                imageUrl:  _auth.user.imagen,
-                imageBuilder: (context, imageProvider) => new Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  image: DecorationImage(
-                      image: NetworkImage(item.imagenes[0]), fit: BoxFit.cover),
-                ),
-                child: Card(
-                    color: Colors.white70,
-                    child: Column(
-                      children: <Widget>[
-                        SizedBox(height: 10),
-                        Text(
-                          item.nombre,
-                          style: TextStyle(
-                              color: Colors.blue, fontWeight: FontWeight.bold),
-                        ),
-                        CircleProgressCustom(begin: 25, end: 25)
-                      ],
-                    )),
-              ),
-                placeholder: (context, url) => CircularProgressIndicator(),
-                errorWidget: (context, url, error) => Icon(Icons.error),
-              ),
+        child: CachedNetworkImage(
+          imageUrl: _auth.user.imagen,
+          imageBuilder: (context, imageProvider) => new Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              image: DecorationImage(
+                  image: NetworkImage(item.imagenes[0]), fit: BoxFit.cover),
+            ),
+            child: Card(
+                color: Colors.white70,
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 10),
+                    Text(
+                      item.nombre,
+                      style: TextStyle(
+                          color: Colors.blue, fontWeight: FontWeight.bold),
+                    ),
+                    CircleProgressCustom(begin: 25, end: 25)
+                  ],
+                )),
+          ),
+          placeholder: (context, url) => CircularProgressIndicator(),
+          errorWidget: (context, url, error) => Icon(Icons.error),
+        ),
       ));
     });
 

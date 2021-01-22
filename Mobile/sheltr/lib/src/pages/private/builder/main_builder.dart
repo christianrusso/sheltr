@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sheltr/src/model/project.dart';
@@ -38,29 +39,15 @@ class _MainBuilderPageState extends State<MainBuilderPage> {
               onTap: () async {
                 var list = await Utils.loadAssets(maxImagenes: 1);
                 await _authService.uploadImages(list[0]);
+                setState(() {});
               },
-              child: CircleAvatar(
-                backgroundColor: Colors.transparent,
-                child: Padding(
-                  padding: EdgeInsets.only(top: 68.0, left: 65.0),
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(
-                      Icons.photo_camera,
-                      color: Colors.blueAccent,
-                      size: 25.0,
-                    ),
-                  ),
-                ),
-                radius: 50.0,
-                backgroundImage: _authService.user.imagen == ''
-                    ? AssetImage('assets/images/no-image.jpg')
-                    : NetworkImage(_authService.user.imagen),
+              child: CachedNetworkImage(
+                imageUrl: _authService.user.imagen,
+                imageBuilder: (context, imageProvider) =>
+                    mainAvatar(imageProvider),
+                placeholder: (context, url) => CircularProgressIndicator(),
+                errorWidget: (context, url, error) =>
+                    mainAvatar(AssetImage('assets/images/no-image.jpg')),
               ),
             ),
             SizedBox(
@@ -136,6 +123,30 @@ class _MainBuilderPageState extends State<MainBuilderPage> {
           ],
         ),
       ),
+    );
+  }
+
+  CircleAvatar mainAvatar(ImageProvider<Object> imageProvider) {
+    return CircleAvatar(
+      backgroundColor: Colors.transparent,
+      child: Padding(
+        padding: EdgeInsets.only(top: 68.0, left: 65.0),
+        child: Container(
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            Icons.photo_camera,
+            color: Colors.blueAccent,
+            size: 25.0,
+          ),
+        ),
+      ),
+      radius: 50.0,
+      backgroundImage: imageProvider,
     );
   }
 

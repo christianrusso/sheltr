@@ -1,9 +1,9 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
-import {Storage} from '@google-cloud/storage';
-import * as fs from 'fs-extra';
-import * as paths from 'path';
-import * as os from 'os';
+// import {Storage} from '@google-cloud/storage';
+// import * as fs from 'fs-extra';
+// import * as paths from 'path';
+// import * as os from 'os';
 
 
 
@@ -30,7 +30,7 @@ export const deleteUser = functions.firestore.document('Users/{userID}')
       return deletedValue; 
 
     });
-
+/*
 export const optimizeImages = functions.storage
 .object()
 .onFinalize(async object => {
@@ -128,3 +128,4 @@ export const optimizeImages = functions.storage
 
   
 });
+*/

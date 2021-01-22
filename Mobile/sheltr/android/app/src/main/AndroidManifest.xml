@@ -13,7 +13,9 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="sheltr"
-        android:icon="@mipmap/sp_laucncher">
+        android:icon="@mipmap/sp_laucncher"
+        android:allowBackup = "false"
+        android:fullBackupContent = "false">
         <meta-data android:name="com.mapbox.token" android:value="pk.eyJ1IjoiYmVybmFyZG92ZWh0IiwiYSI6ImNrZXV1NWVpbDA2czEyeG9qeDFzZDRmd2oifQ.6IrXOGtfRtOVR4ljInkjQA" />
         <activity
             android:name=".MainActivity"

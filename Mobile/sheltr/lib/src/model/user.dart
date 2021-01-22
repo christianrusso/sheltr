@@ -49,7 +49,7 @@ class User with ChangeNotifier {
   //     };
 
   void setFromFireStore(DocumentSnapshot userDoc) {
-    var userData = userDoc.data;
+    Map userData = userDoc.data;
     this.id = userDoc.documentID;
     this.nombre = userData['Nombre'];
     this.imagen = userData['Imagen'];

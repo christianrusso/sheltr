@@ -270,7 +270,7 @@ class _RegisterPageState extends State<RegisterPage> {
       SweetAlert.show(context,
           style: SweetAlertStyle.error,
           title: "Error",
-          subtitle: "Error al registrar el usuario ");
+          subtitle: "El usuario ya se encuentra registrado");
     }
   }
 }
