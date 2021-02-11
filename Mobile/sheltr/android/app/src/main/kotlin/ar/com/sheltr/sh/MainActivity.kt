@@ -1,4 +1,4 @@
-package ar.com.sheltr.sheltr
+package ar.com.sheltr.sh
 
 import io.flutter.embedding.android.FlutterActivity
 

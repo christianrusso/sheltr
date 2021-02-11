@@ -8,20 +8,12 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:592553192950:android:231cdd938aefa3e36fabd7",
+        "mobilesdk_app_id": "1:592553192950:android:21df225239b5c4576fabd7",
         "android_client_info": {
-          "package_name": "ar.com.sheltr.sheltr"
+          "package_name": "ar.com.sheltr.sh"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "592553192950-1bthj02lcr4jk229mcdtdv8pcf77b4j2.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "ar.com.sheltr.sheltr",
-            "certificate_hash": "e9f7f4b419811d9d25ff4de08e3ae7b83b09a5ea"
-          }
-        },
         {
           "client_id": "592553192950-eqgarfc6lccrcur1cais1uv3m66e5nnu.apps.googleusercontent.com",
           "client_type": 3
@@ -38,6 +30,13 @@
             {
               "client_id": "592553192950-eqgarfc6lccrcur1cais1uv3m66e5nnu.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "592553192950-grt0qpsef3aepadmcjr1dv482m7ng1fl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ar.com.sheltr.sheltr"
+              }
             }
           ]
         }
