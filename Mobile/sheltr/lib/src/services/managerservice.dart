@@ -4,7 +4,7 @@ import 'package:sheltr/src/model/user.dart';
 
 class ManagerService with ChangeNotifier {
   final Firestore _db = Firestore.instance;
-  List<User> _users = new List();
+  List<User> _users = [];
   User _currentUser = new User();
 
   ManagerService() {

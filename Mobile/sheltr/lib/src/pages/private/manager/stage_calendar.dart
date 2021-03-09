@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sheltr/src/widget/appBar.dart';
 import 'package:sheltr/src/widget/sideMenu.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:sheltr/src/utilities/utils.dart' as Utils;
 
 class StageCalendarManagerPage extends StatefulWidget {
   static final String routeName = 'stagecalendarmanager';
@@ -162,7 +160,7 @@ class _StageCalendarManagerPageState extends State<StageCalendarManagerPage>
           borderRadius: BorderRadius.circular(16.0),
         ),
       ),
-      onDaySelected: _onDaySelected,
+      //onDaySelected: _onDaySelected,
       onVisibleDaysChanged: _onVisibleDaysChanged,
       onCalendarCreated: _onCalendarCreated,
     );
@@ -251,10 +249,11 @@ class _StageCalendarManagerPageState extends State<StageCalendarManagerPage>
           return children;
         },
       ),
+      /*
       onDaySelected: (date, events) {
         _onDaySelected(date, events);
         _animationController.forward(from: 0.0);
-      },
+      },*/
       onVisibleDaysChanged: _onVisibleDaysChanged,
       onCalendarCreated: _onCalendarCreated,
     );

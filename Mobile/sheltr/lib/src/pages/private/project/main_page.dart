@@ -36,7 +36,7 @@ class _MainProjectPage extends State<MainProjectPage> {
           child: StreamBuilder(
               stream: _projectService.getProyectByIdUser(_auth.user.id),
               builder: (context, snapshot) {
-                List<Project> projects = List();
+                List<Project> projects = [];
 
                 if (snapshot.hasData) {
                   final List<DocumentSnapshot> items = snapshot.data.documents;
@@ -63,18 +63,18 @@ class _MainProjectPage extends State<MainProjectPage> {
       left: 35.0,
       top: 5.0,
       child: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            GestureDetector(
-              onTap: () async {
-                var list = await Utils.loadAssets(maxImagenes: 1);
-                if (list != null) {
-                  await _auth.uploadImages(list[0]);
-                  setState(() {});
-                }
-              },
-              child: CachedNetworkImage(
+        child: GestureDetector(
+          onTap: () async {
+            var list = await Utils.loadAssets(maxImagenes: 1);
+            if (list != null) {
+              await _auth.uploadImages(list[0]);
+              setState(() {});
+            }
+          },
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              CachedNetworkImage(
                 imageUrl: _auth.user.imagen,
                 imageBuilder: (context, imageProvider) =>
                     mainAvatar(imageProvider),
@@ -82,35 +82,35 @@ class _MainProjectPage extends State<MainProjectPage> {
                 errorWidget: (context, url, error) =>
                     mainAvatar(AssetImage('assets/images/no-image.jpg')),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-                '${_auth.user.nombre[0].toUpperCase()}${_auth.user.nombre.substring(1)}',
-                style: Styles.titlesHeader),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              children: <Widget>[
-                Icon(
-                  Icons.location_on,
-                  size: 15,
-                ),
-                SizedBox(width: 5.0),
-                Text(
-                  "Villa Crespo,Cabas",
-                  style: Styles.textPragraf,
-                )
-              ],
-            ),
-            SizedBox(height: 5.0),
-            Text(
-              'Mis Proyectos',
-              style: Styles.subTitelsHeader,
-            ),
-          ],
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                  '${_auth.user.nombre[0].toUpperCase()}${_auth.user.nombre.substring(1)}',
+                  style: Styles.titlesHeader),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.location_on,
+                    size: 15,
+                  ),
+                  SizedBox(width: 5.0),
+                  Text(
+                    "Villa Crespo,Cabas",
+                    style: Styles.textPragraf,
+                  )
+                ],
+              ),
+              SizedBox(height: 5.0),
+              Text(
+                'Mis Proyectos',
+                style: Styles.subTitelsHeader,
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -141,7 +141,7 @@ class _MainProjectPage extends State<MainProjectPage> {
   }
 
   List<Widget> _items(List<Project> items) {
-    final content = List<Widget>();
+    final content = <Widget>[];
 
     items.forEach((item) {
       content.add(GestureDetector(

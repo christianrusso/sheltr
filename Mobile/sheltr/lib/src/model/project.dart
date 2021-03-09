@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 
 class Projects with ChangeNotifier {
-  List<Project> items = List();
+  List<Project> items = [];
   Projects();
 
   Projects.fromFirestoreList(List<DocumentSnapshot> docItems) {

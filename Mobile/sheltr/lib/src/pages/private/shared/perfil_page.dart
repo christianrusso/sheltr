@@ -124,7 +124,7 @@ class _PerfilPageState extends State<PerfilPage> {
   }
 
   List<Widget> _items() {
-    final content = List<Widget>();
+    final content = <Widget>[];
 
     content.add(GestureDetector(
       onTap: () {},

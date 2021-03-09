@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class Users with ChangeNotifier {
-  List<User> items = List();
+  List<User> items = [];
   Users();
 
   Users.fromFirestoreList(List<DocumentSnapshot> docItems) {

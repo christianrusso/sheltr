@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:sheltr/src/model/project.dart';
 import 'package:sheltr/src/pages/private/project/add_page.dart';
@@ -190,6 +191,10 @@ class InitProjectPage extends StatelessWidget {
                               child: TextField(
                                 controller: _cantPersonaCotroller,
                                 keyboardType: TextInputType.number,
+                                inputFormatters: <TextInputFormatter>[
+                                  FilteringTextInputFormatter.allow(
+                                      RegExp(r'[0-9]')),
+                                ],
                                 decoration: new InputDecoration(
                                   suffixIcon: IconButton(
                                       icon: Icon(
@@ -499,66 +504,68 @@ class InitProjectPage extends StatelessWidget {
                           SizedBox(
                             height: 15.0,
                           ),
-                          Padding(
-                            padding:
-                                const EdgeInsets.only(left: 80.0, top: 30.0),
-                            child: RaisedButton(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(80.0)),
-                                padding: EdgeInsets.all(0.0),
-                                child: Ink(
-                                  decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        colors: [
-                                          Color(0xFF176CF2),
-                                          Color(0xFF176CF2)
-                                        ],
-                                        begin: Alignment.centerLeft,
-                                        end: Alignment.centerRight,
-                                      ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              RaisedButton(
+                                  shape: RoundedRectangleBorder(
                                       borderRadius:
-                                          BorderRadius.circular(30.0)),
-                                  child: Container(
-                                    constraints: BoxConstraints(
-                                        maxWidth: 150.0, minHeight: 45.0),
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      "Aceptar",
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          fontFamily: 'MyriadPro',
-                                          fontSize: 19.0),
+                                          BorderRadius.circular(80.0)),
+                                  padding: EdgeInsets.all(0.0),
+                                  child: Ink(
+                                    decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          colors: [
+                                            Color(0xFF176CF2),
+                                            Color(0xFF176CF2)
+                                          ],
+                                          begin: Alignment.centerLeft,
+                                          end: Alignment.centerRight,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(30.0)),
+                                    child: Container(
+                                      constraints: BoxConstraints(
+                                          maxWidth: 150.0, minHeight: 45.0),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "Aceptar",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontFamily: 'MyriadPro',
+                                            fontSize: 19.0),
+                                      ),
                                     ),
                                   ),
-                                ),
-                                onPressed: () {
-                                  //TODO VALidador
+                                  onPressed: () {
+                                    //TODO VALidador
 
-                                  final _proyect = new Project();
+                                    final _proyect = new Project();
 
-                                  _proyect.nombre =
-                                      _nombreCotroller.text[0].toUpperCase() +
-                                          _nombreCotroller.text.substring(1);
-                                  _proyect.refugio = _refugioCotroller.text;
-                                  _proyect.cantPersona =
-                                      int.parse(_cantPersonaCotroller.text);
-                                  _proyect.hobby = _hobbyCotroller.text;
-                                  _proyect.lugarPrincipal =
-                                      _lugarPrincipalCotroller.text;
-                                  _proyect.lugarPreferido =
-                                      _lugarPreferidoCotroller.text;
-                                  _proyect.acercaDeTi =
-                                      _acercaDeTiCotroller.text;
-                                  _proyect.comoEsTuDia =
-                                      _comoEsTuDiaCotroller.text;
-                                  _proyect.idCreator = userProvider.id;
+                                    _proyect.nombre =
+                                        _nombreCotroller.text[0].toUpperCase() +
+                                            _nombreCotroller.text.substring(1);
+                                    _proyect.refugio = _refugioCotroller.text;
+                                    _proyect.cantPersona =
+                                        int.parse(_cantPersonaCotroller.text);
+                                    _proyect.hobby = _hobbyCotroller.text;
+                                    _proyect.lugarPrincipal =
+                                        _lugarPrincipalCotroller.text;
+                                    _proyect.lugarPreferido =
+                                        _lugarPreferidoCotroller.text;
+                                    _proyect.acercaDeTi =
+                                        _acercaDeTiCotroller.text;
+                                    _proyect.comoEsTuDia =
+                                        _comoEsTuDiaCotroller.text;
+                                    _proyect.idCreator = userProvider.id;
 
-                                  proyectProvider.project = _proyect;
+                                    proyectProvider.project = _proyect;
 
-                                  Navigator.popAndPushNamed(
-                                      context, AddProjectPage.routeName);
-                                }),
+                                    Navigator.popAndPushNamed(
+                                        context, AddProjectPage.routeName);
+                                  }),
+                            ],
                           ),
                         ],
                       ),

@@ -7,10 +7,10 @@ import 'package:sheltr/src/model/project.dart';
 
 class ProjectService with ChangeNotifier {
   final Firestore _db = Firestore.instance;
-  List<Asset> _images = new List();
-  List<String> _urlImagens = new List();
+  List<Asset> _images = [];
+  List<String> _urlImagens = [];
   Project _project = new Project();
-  List<Project> _projects = new List();
+  List<Project> _projects = [];
 
   ProjectService();
 
@@ -38,7 +38,7 @@ class ProjectService with ChangeNotifier {
   }
 
   Future<QuerySnapshot> getProjectsByIdBuilders(String id) async {
-    List<String> projects = new List();
+    List<String> projects = [];
     CollectionReference builderRef = _db.collection('ProjectUsers');
 
     var doc = await builderRef.document(id).get();

@@ -14,7 +14,7 @@ class RadioButtonCustom extends StatefulWidget {
 class _RadioButtonCustomState extends State<RadioButtonCustom> {
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Container(
       child: ListView.builder(
           itemCount: widget.itmesRadios.length,
           itemBuilder: (BuildContext context, int index) {

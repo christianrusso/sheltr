@@ -80,13 +80,23 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       items: [
         CustomNavigationBarItem(
-            icon: Image(image: AssetImage('assets/images/icon_main.png'))),
+            icon: Container(
+          child: Image(image: AssetImage('assets/images/icon_main.png')),
+          padding: EdgeInsets.all(0.1),
+        )),
         CustomNavigationBarItem(
-            icon: Image(image: AssetImage('assets/images/icon_bell.png'))),
+            icon: Container(
+          child: Image(image: AssetImage('assets/images/icon_bell.png')),
+          padding: EdgeInsets.only(top: 8.0),
+        )),
         CustomNavigationBarItem(
-            icon: Image(image: AssetImage('assets/images/icon_mail.png'))),
+            icon: Container(
+                child: Image(image: AssetImage('assets/images/icon_mail.png')),
+                padding: EdgeInsets.only(top: 8.0))),
         CustomNavigationBarItem(
-            icon: Image(image: AssetImage('assets/images/icon_word.png')))
+            icon: Container(
+                child: Image(image: AssetImage('assets/images/icon_word.png')),
+                padding: EdgeInsets.only(top: 8.0)))
       ],
       currentIndex: _index > 3 ? 0 : _index,
       onTap: (index) {

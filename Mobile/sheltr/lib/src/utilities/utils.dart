@@ -95,7 +95,7 @@ Future<bool> questionMessageWithImage(
 }
 
 Future<List<Asset>> loadAssets({int maxImagenes = 10}) async {
-  List<Asset> resultList = List<Asset>();
+  List<Asset> resultList = [];
 
   try {
     resultList = await MultiImagePicker.pickImages(
@@ -111,17 +111,17 @@ Future<List<Asset>> loadAssets({int maxImagenes = 10}) async {
         selectCircleStrokeColor: "#000000",
       ),
     );
-
+/*
     print(resultList.length);
     print((await resultList[0].getThumbByteData(122, 100)));
     print((await resultList[0].getByteData()));
-    print((await resultList[0].metadata));
+    print((await resultList[0].metadata));*/
+
+    return resultList;
   } on Exception catch (e) {
     print(e.toString());
     return null;
   }
-
-  return resultList;
 }
 
 class MultiPickerApp {

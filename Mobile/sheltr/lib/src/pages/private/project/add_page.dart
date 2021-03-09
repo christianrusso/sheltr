@@ -154,8 +154,7 @@ class _AddProjectPageState extends State<AddProjectPage> {
 
   Widget _body() {
     return Container(
-        margin: EdgeInsets.only(
-            top: MediaQuery.of(context).size.height * 0.23, left: 30.0),
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.23),
         height: double.infinity,
         child: PageView.builder(
           controller: _pageController,
