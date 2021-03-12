@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>592553192950-aenm9a1vojmvvndj384uecn0k9r1vk5v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.592553192950-aenm9a1vojmvvndj384uecn0k9r1vk5v</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>592553192950-1bthj02lcr4jk229mcdtdv8pcf77b4j2.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDRJdGvftHM7MUb24WX6Fn8BXG3Nx3Mi3w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>592553192950</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ar.com.sheltr.sh</string>
+	<key>PROJECT_ID</key>
+	<string>sheltr-f785f</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sheltr-f785f.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:592553192950:ios:33565768b43fc1236fabd7</string>
+	<key>DATABASE_URL</key>
+	<string>https://sheltr-f785f.firebaseio.com</string>
+</dict>
+</plist>

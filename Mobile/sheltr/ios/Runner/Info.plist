@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Shertr</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -19,9 +21,19 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiYmVybmFyZG92ZWh0IiwiYSI6ImNrZXV1NWVpbDA2czEyeG9qeDFzZDRmd2oifQ.6IrXOGtfRtOVR4ljInkjQA</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Necesitamos permisos para usar su camara para tomar sus fotos de su eleccion</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Necesitamos saber su ubicacion ,para encotrar un manager acorde a tu locacion</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Necesitamos permisos para usar su video para tomar sus fotos de su eleccion</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Necesitamos permisos para usar  para recorrer su galeria y subir sus imagenes</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -41,5 +53,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
 </dict>
 </plist>
