@@ -2,6 +2,7 @@ import { UserService } from './../../../../services/user.service';
 import { Users } from './../../../../models/user';
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-new-user',
@@ -24,6 +25,10 @@ export class NewUserComponent implements OnInit {
   ngOnInit(): void {
   }
   addNewUser(data: Users) {
+      if(this.newUserForm.invalid){
+        Swal.fire('Oops...', 'Todos los campos deben estar completo , para poder agregar un usuario!', 'error');
+        return;
+      }
     this.userSvc.addOrUpdate(data, this.Image);
   }
   handleImage(e: any): void {

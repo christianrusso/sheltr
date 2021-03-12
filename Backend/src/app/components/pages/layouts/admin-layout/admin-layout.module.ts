@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { MaterialModule } from '../../../../matreial.module';
+import { ProfileComponent } from '../../profile/profile.component';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { MaterialModule } from '../../../../matreial.module';
   declarations: [
     DashboardComponent,
     UserProfileComponent,
+    ProfileComponent,
     TableListComponent,
     UpgradeComponent,
     TypographyComponent,

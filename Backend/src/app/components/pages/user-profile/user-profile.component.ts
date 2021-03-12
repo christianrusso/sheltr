@@ -23,12 +23,18 @@ export class UserProfileComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator, { static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true}) sort: MatSort;
 
+  length = 0;
+  pageSize = 10;
+  pageSizeOptions: number[] = [5, 10, 25, 100];
+
 
   constructor(private userSvc: UserService, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.userSvc.getAll().subscribe(res => {
-      this.dataSource.data = res; });
+      this.dataSource.data = res; 
+      this.length = this.dataSource.data.length;
+    });
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
