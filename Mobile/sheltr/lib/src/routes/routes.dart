@@ -23,7 +23,8 @@ import 'package:sheltr/src/pages/private/shared/contact_page.dart';
 import 'package:sheltr/src/pages/private/shared/faq_page.dart';
 import 'package:sheltr/src/pages/private/shared/home_page.dart';
 import 'package:sheltr/src/pages/private/shared/mapa_page.dart';
-import 'package:sheltr/src/pages/private/shared/message_page.dart';
+import 'package:sheltr/src/pages/private/shared/message/chats_page.dart';
+// import 'package:sheltr/src/pages/private/shared/message/message_page.dart';
 import 'package:sheltr/src/pages/private/shared/news_page.dart';
 import 'package:sheltr/src/pages/private/shared/notification_page.dart';
 import 'package:sheltr/src/pages/private/shared/wallet.dart';
@@ -62,10 +63,11 @@ Map<String, WidgetBuilder> getApplicationsRoutes() {
     'mapa': (BuildContext context) => MapaPage(),
     'notifications': (BuildContext context) => NotificationsPage(),
     'news': (BuildContext context) => NewsPage(),
-    'message': (BuildContext context) => MenssagePage(),
-    'messagedetails': (BuildContext context) => MessageDetailPage(),
+    // 'message': (BuildContext context) => MenssagePage(),
+    // 'messagedetails': (BuildContext context) => MessageDetailPage(),
     'perfil': (BuildContext context) => PerfilPage(),
     'initproject': (BuildContext context) => InitProjectPage(),
     'stagesexecutemanager': (BuildContext context) => StageExecuteManagerPage(),
-  };
+    'chats' :(BuildContext context) => ChatsPage(),
+   };
 }

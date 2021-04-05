@@ -539,10 +539,7 @@ class InitProjectPage extends StatelessWidget {
                                     ),
                                   ),
                                   onPressed: () {
-                                    //TODO VALidador
-
                                     final _proyect = new Project();
-
                                     _proyect.nombre =
                                         _nombreCotroller.text[0].toUpperCase() +
                                             _nombreCotroller.text.substring(1);

@@ -4,10 +4,9 @@ import 'package:provider/provider.dart';
 import 'package:sheltr/src/pages/private/builder/main_builder.dart';
 import 'package:sheltr/src/pages/private/manager/main_manager.dart';
 import 'package:sheltr/src/pages/private/project/main_page.dart';
+import 'package:sheltr/src/pages/private/shared/message/chats_page.dart';
 import 'package:sheltr/src/services/authservice.dart';
 import 'package:sheltr/src/widget/sideMenu.dart';
-
-import 'message_page.dart';
 import 'news_page.dart';
 import 'notification_page.dart';
 
@@ -52,7 +51,7 @@ class _HomePageState extends State<HomePage> {
         return NotificationsPage();
         break;
       case 2:
-        return MenssagePage();
+        return ChatsPage();
         break;
       case 3:
         return NewsPage();

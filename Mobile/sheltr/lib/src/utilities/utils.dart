@@ -1,9 +1,12 @@
 import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:multi_image_picker/multi_image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'dart:async';
+
 
 enum TipoUsuario { None, Admin, Builder, Manager, Creator }
 enum EstadoProyecto {
@@ -232,11 +235,9 @@ class PreferenciasUsuario {
     _prefs.setString('token', value);
   }
 
-  set profile(String value) {
-    _prefs.setString('profile', json.encode(value));
-  }
+  set profile(value) => _prefs.setString('profile', json.encode(value));
 
-  String get profile => json.decode(_prefs.get('profile'));
+  get profile => json.decode(_prefs.getString('profile'));
 
   // GET y SET de la última página
   int get initPage {
@@ -245,5 +246,33 @@ class PreferenciasUsuario {
 
   set initPage(int value) {
     _prefs.setInt('initpage', value);
+  }
+}
+
+class Utils {
+
+    static StreamTransformer transformer<T>(
+          T Function(Map<String, dynamic> json) fromJson) =>
+      StreamTransformer<QuerySnapshot, List<T>>.fromHandlers(
+        handleData: (QuerySnapshot data, EventSink<List<T>> sink) {
+          final snaps = data.documents.map((doc) => doc.data).toList();
+          final users = snaps.map((json) => fromJson(json)).toList();
+
+          
+
+          sink.add(users);
+        },
+      );
+
+  static DateTime toDateTime(Timestamp value) {
+    if (value == null) return null;
+
+    return value.toDate();
+  }
+
+  static dynamic fromDateTimeToJson(DateTime date) {
+    if (date == null) return null;
+
+    return date.toUtc();
   }
 }
