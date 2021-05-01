@@ -24,8 +24,6 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>MGLMapboxAccessToken</key>
-	<string>pk.eyJ1IjoiYmVybmFyZG92ZWh0IiwiYSI6ImNrZXV1NWVpbDA2czEyeG9qeDFzZDRmd2oifQ.6IrXOGtfRtOVR4ljInkjQA</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Necesitamos permisos para usar su camara para tomar sus fotos de su eleccion</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -53,7 +51,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>io.flutter.embedded_views_preview</key>
-	<true/>
 </dict>
 </plist>

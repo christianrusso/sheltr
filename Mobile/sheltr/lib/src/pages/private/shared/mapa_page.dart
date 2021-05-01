@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:mapbox_gl/mapbox_gl.dart';
+//import 'package:mapbox_gl/mapbox_gl.dart';
 import 'package:sheltr/src/widget/sideMenu.dart';
 
 class MapaPage extends StatefulWidget {
   static final String routeName = 'mapa';
-
+  //static const String ACCESS_TOKEN = "pk.eyJ1IjoiYmVybmFyZG92ZWh0IiwiYSI6ImNrZXV1NWVpbDA2czEyeG9qeDFzZDRmd2oifQ.6IrXOGtfRtOVR4ljInkjQA";
   @override
   _MapaPageState createState() => _MapaPageState();
 }
 
 class _MapaPageState extends State<MapaPage> {
-  MapboxMapController mapController;
+  //MapboxMapController mapController;
+  
 
-  void _onMapCreated(MapboxMapController controller) {
-    mapController = controller;
-  }
+  //void _onMapCreated(MapboxMapController controller) {
+    //mapController = controller;
+  //}
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +32,11 @@ class _MapaPageState extends State<MapaPage> {
     return Container(
       height: 600,
       width: 600,
-      child: MapboxMap(
-        onMapCreated: _onMapCreated,
-        initialCameraPosition:
-            const CameraPosition(target: LatLng(-34.609017, -58.372560)),
-      ),
+      //child: MapboxMap(
+      //  onMapCreated: _onMapCreated,
+      //  initialCameraPosition:
+      //      const CameraPosition(target: LatLng(-34.609017, -58.372560)),
+    //  ),
     );
   }
 }

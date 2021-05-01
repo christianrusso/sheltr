@@ -356,18 +356,7 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.5.0)
-  - leveldb-library (1.22)
-  - Mapbox-iOS-SDK (5.6.1):
-    - MapboxMobileEvents (= 0.10.2)
-  - mapbox_gl (0.0.1):
-    - Flutter
-    - Mapbox-iOS-SDK (~> 5.6.0)
-    - MapboxAnnotationExtension (~> 0.0.1-beta.1)
-  - mapbox_gl_web (0.1.0):
-    - Flutter
-  - MapboxAnnotationExtension (0.0.1-beta.1):
-    - Mapbox-iOS-SDK (~> 5.2)
-  - MapboxMobileEvents (0.10.2)
+  - leveldb-library (1.22.1)
   - multi_image_picker (4.7.15):
     - BSImagePicker (~> 2.10.3)
     - Flutter
@@ -400,27 +389,25 @@ PODS:
     - FMDB (>= 2.7.5)
 
 DEPENDENCIES:
-  - cloud_firestore (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.7/ios`)
-  - "cloud_firestore_web (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/ios`)"
-  - "firebase_auth (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.15.5+3/ios`)"
-  - "firebase_auth_web (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/ios`)"
-  - firebase_core (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/ios`)
-  - "firebase_core_web (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/ios`)"
-  - firebase_storage (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-3.1.6/ios`)
-  - Flutter (from `/Users/bernardoveht/developer/flutter/bin/cache/artifacts/engine/ios`)
-  - mapbox_gl (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/mapbox_gl-0.7.0/ios`)
-  - mapbox_gl_web (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/mapbox_gl_web-0.7.0/ios`)
-  - multi_image_picker (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.7.15/ios`)
-  - path_provider (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.24/ios`)
-  - "path_provider_linux (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2/ios`)"
-  - "path_provider_macos (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+6/ios`)"
-  - "path_provider_windows (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.4+1/ios`)"
-  - shared_preferences (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.12/ios`)
-  - "shared_preferences_linux (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-0.0.2+2/ios`)"
-  - "shared_preferences_macos (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+10/ios`)"
-  - "shared_preferences_web (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7/ios`)"
-  - "shared_preferences_windows (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-0.0.1+1/ios`)"
-  - "sqflite (from `/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.2+1/ios`)"
+  - cloud_firestore (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.7/ios`)
+  - "cloud_firestore_web (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/ios`)"
+  - "firebase_auth (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.15.5+3/ios`)"
+  - "firebase_auth_web (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/ios`)"
+  - firebase_core (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/ios`)
+  - "firebase_core_web (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/ios`)"
+  - firebase_storage (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-3.1.6/ios`)
+  - Flutter (from `/Users/bernardoveht/Programas/flutter/bin/cache/artifacts/engine/ios`)
+  - multi_image_picker (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.7.15/ios`)
+  - path_provider (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.28/ios`)
+  - "path_provider_linux (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2/ios`)"
+  - "path_provider_macos (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+8/ios`)"
+  - "path_provider_windows (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.4+3/ios`)"
+  - "shared_preferences (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.12+4/ios`)"
+  - "shared_preferences_linux (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-0.0.2+4/ios`)"
+  - "shared_preferences_macos (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+11/ios`)"
+  - "shared_preferences_web (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7/ios`)"
+  - "shared_preferences_windows (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-0.0.2+3/ios`)"
+  - "sqflite (from `/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.2+4/ios`)"
 
 SPEC REPOS:
   trunk:
@@ -445,55 +432,48 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
-    - Mapbox-iOS-SDK
-    - MapboxAnnotationExtension
-    - MapboxMobileEvents
     - nanopb
     - PromisesObjC
 
 EXTERNAL SOURCES:
   cloud_firestore:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.7/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.13.7/ios"
   cloud_firestore_web:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2/ios"
   firebase_auth:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.15.5+3/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth-0.15.5+3/ios"
   firebase_auth_web:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_auth_web-0.1.3+1/ios"
   firebase_core:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.4.5/ios"
   firebase_core_web:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2/ios"
   firebase_storage:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-3.1.6/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_storage-3.1.6/ios"
   Flutter:
-    :path: "/Users/bernardoveht/developer/flutter/bin/cache/artifacts/engine/ios"
-  mapbox_gl:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/mapbox_gl-0.7.0/ios"
-  mapbox_gl_web:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/mapbox_gl_web-0.7.0/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/bin/cache/artifacts/engine/ios"
   multi_image_picker:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.7.15/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/multi_image_picker-4.7.15/ios"
   path_provider:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.24/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.28/ios"
   path_provider_linux:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2/ios"
   path_provider_macos:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+6/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+8/ios"
   path_provider_windows:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.4+1/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.4+3/ios"
   shared_preferences:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.12/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.12+4/ios"
   shared_preferences_linux:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-0.0.2+2/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-0.0.2+4/ios"
   shared_preferences_macos:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+10/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-0.0.1+11/ios"
   shared_preferences_web:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-0.1.2+7/ios"
   shared_preferences_windows:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-0.0.1+1/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-0.0.2+3/ios"
   sqflite:
-    :path: "/Users/bernardoveht/developer/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.2+1/ios"
+    :path: "/Users/bernardoveht/Programas/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.3.2+4/ios"
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -524,12 +504,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
-  leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
-  Mapbox-iOS-SDK: b31bd62a5dd5b7e688eab787acd3d093a122f4d6
-  mapbox_gl: 48d261b93d7dfc2367c2f93b493ea8f43df5ba96
-  mapbox_gl_web: 029cfb3c841d146fde3209538782498350a87f3f
-  MapboxAnnotationExtension: d66de5561562c9d940153c0135725e671407b781
-  MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
+  leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   multi_image_picker: 58577ab96d99b35c82d626db7d81906d14c2b667
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
@@ -544,6 +519,6 @@ SPEC CHECKSUMS:
   shared_preferences_windows: 36b76d6f54e76ead957e60b49e2f124b4cd3e6ae
   sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
 
-PODFILE CHECKSUM: d360ce257e0979c07a6267d2b8c29527f638401b
+PODFILE CHECKSUM: 21aa8f45a7190cbab17ed2e7f5654323a6d3cef0
 
 COCOAPODS: 1.10.1
